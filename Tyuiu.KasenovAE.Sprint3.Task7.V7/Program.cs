@@ -39,18 +39,18 @@ namespace Tyuiu.KasenovAE.Sprint3.Task7.V7
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
             Console.WriteLine("***************************************************************************");
 
-            Console.WriteLine("+----------+------------+");
-            Console.WriteLine("|    X     |   f(x)\t|");
-            Console.WriteLine("+----------+------------+");
+            Console.WriteLine("+----------+----------+");
+            Console.WriteLine("|    X     |   f(x)   |");
+            Console.WriteLine("+----------+----------+");
 
             DataService ds = new DataService();
             int X = Start;
             foreach (double i in ds.GetMassFunction(Start, Stop))
             {
-                Console.WriteLine("|{0, 5:d}     |{1,5:f2}\t|", X, i);
+                Console.WriteLine("|{0,10:d}|{1,10:f2}|", X, i);
                 X++;
             }
-            Console.WriteLine("+----------+------------+");
+            Console.WriteLine("+----------+----------+");
             Console.ReadKey();
         }
     }
